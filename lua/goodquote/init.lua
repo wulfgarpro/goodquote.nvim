@@ -1,4 +1,4 @@
-package.cpath = package.cpath .. ";./build/?.so"
+package.cpath = package.cpath .. ";src/build/?.so"
 
 local gq = require "gq"
 local M = {}

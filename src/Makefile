@@ -1,6 +1,6 @@
 PLUGIN_NAME = gq
 SRC         = gq.c
-BUILD_DIR   = ../build
+BUILD_DIR   = build
 CFLAGS     += -O2 -fPIC
 LDFLAGS    += -shared
 LUA_FLAGS  := $(shell pkg-config --cflags --libs luajit)
