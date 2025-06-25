@@ -1,4 +1,4 @@
-package.cpath = package.cpath .. ";src/build/?.so"
+package.cpath = package.cpath .. ";/home/pwent/code/personal/goodquote.nvim/src/build/?.so"
 
 local M = {}
 local gq = require "gq"
@@ -25,7 +25,9 @@ function M.GoodQuote()
     -- print(rss_xml_response.body)
 
     local m = gq.gq_parse_rss(rss_xml_response.body)
-    print(m)
+    for _, v in ipairs(m) do
+      print(v)
+    end
   else
     print "GoodQuote: `rss_url` not set in configuration."
   end
