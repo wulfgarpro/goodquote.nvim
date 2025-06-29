@@ -22,11 +22,11 @@ function M.GoodQuote()
       return
     end
 
-    -- print(rss_xml_response.body)
-
-    local m = gq.gq_parse_rss(rss_xml_response.body)
-    for _, v in ipairs(m) do
-      print(v)
+    local q = gq.gq_parse_rss(rss_xml_response.body)
+    if #q > 0 then
+      print(q[math.random(#q)])
+    else
+      print "GoodQuote: No quotes found."
     end
   else
     print "GoodQuote: `rss_url` not set in configuration."
