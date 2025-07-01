@@ -35,22 +35,10 @@ function M.GoodQuote()
 end
 
 function M.setup(opts)
-  -- Merge user opts with defaults.
   opts = opts or {}
-
   M.opts = opts
-
-  -- Create a user command `:GoodQuote`.
+  -- Define the user command
   vim.api.nvim_create_user_command("GoodQuote", M.GoodQuote, {})
-
-  -- Set up a key mapping.
-  -- Use `opts.keymap`, if provided, otherwise a default.
-  local keymap = opts.keymap or "<leader>gq"
-  -- Create the key map.
-  vim.keymap.set("n", keymap, M.GoodQuote, {
-    desc = "GoodQuote",
-    silent = true, -- Prevents the cmd from being echoed in the command line.
-  })
 end
 
 -- Return the module
