@@ -1,4 +1,4 @@
-package.cpath = package.cpath .. ";/home/pwent/code/personal/goodquote.nvim/src/build/?.so"
+package.cpath = package.cpath .. ";/?.so"
 
 local M = {}
 local gq = require "gq"
